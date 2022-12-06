@@ -9,9 +9,13 @@
     --ff-secondary: 'Roboto Mono', monospace;
 
     --clr-body: #FFFFFF;
-
+    --clr-but: #065E7C;
+    
     --bg-body: #020202;
-    --bg-dark: #06181C;
+    --bg-head: #043444;
+
+    --bg-dark: rgba(6, 20, 25, 0.664);
+    --bg-light: #06181C;
 
 
     font-size: 62.5%;
@@ -29,7 +33,7 @@ body * {
 
 #app { 
     padding: 2rem;
-    max-width: 700px;
+    max-width: 1120px;
     margin: 10rem auto 0;
 }
 
@@ -37,19 +41,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10rem;
+    gap: 29,3rem;
 
     margin-bottom: 8rem;
 }
 
 header #logo {
-    width: 13rem;
-    height: 2.5rem;
+    width: 18.6rem;
+    height: 3.2rem;
 }
 
 .search {
     display: flex;
-    gap: 0.5rem;
+    gap: .8rem;
 }
 
 .sr-only {
@@ -69,14 +73,15 @@ header #logo {
     border-radius: 4px;
     border: none; 
 
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .search input {
     color: #7C7C8A;
+    font-size: 1.4rem; 
     background: var(--bg-dark);
     
-    width: 30rem;    
+    width: 46.2rem;   
 }
 
 .search button {
@@ -84,7 +89,8 @@ header #logo {
     align-items: center;
     gap: 1rem;
 
-    background: #065E7C;
+    background: var(--clr-but);
+    
     cursor: pointer;
 }
 
@@ -94,39 +100,43 @@ header #logo {
 
 .search button p {
     text-transform: uppercase;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #FFFFFF;
+    color: var(--clr-body);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
+    
     padding: 4rem;
+    overflow: hidden;
+    border-style: hidden;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 0 1px #4A808C;
+
 }
 
 thead th {
-    padding: 1.4rem;
-    background: #06161B;
+    padding: 1.6rem 2rem;
+    background: var(--bg-head);
     text-align: center;
 }
 
 thead th:first-child {
     text-align: left;
-    border-top-left-radius: .6rem;
-}
-
-thead th:last-child {
-    border-top-right-radius: .6rem;
 }
 
 /*fundo*/
-table tr:nth-child(odd) {
-    background: #092D38;
+tbody tr:nth-child(even) {
+    background: var(--bg-light);
+    border: 1px solid #4A808C;
 }
   
-table tr:nth-child(even) {
-    background: #06161B;
+tbody tr:nth-child(odd) {
+    background: var(--bg-dark);
+    border: 1px solid #4A808C;
 }
 
 /*corpo*/
@@ -175,7 +185,7 @@ tbody td.user {
 
 /*empty favorites = conteúdo do elemento criado pela DOM*/
 tbody .emptyFav {
-    height: 45rem;
+    height: 30rem;
     padding: 0;
     background-color: hsla(191, 80%, 4%, 0.938);
    
