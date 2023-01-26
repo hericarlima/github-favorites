@@ -1,6 +1,6 @@
 import { UserGithub } from "./userGithub.js"
 
-//lógica dos dados
+//data logic
 export class Favorites {
     constructor(root) {
         this.root = document.querySelector(root)
@@ -50,7 +50,7 @@ export class Favorites {
       }
 }
 
-//visualização dos dados
+//data visualization
 export class FavoritesView extends Favorites {
     constructor(root) {
         super(root)
